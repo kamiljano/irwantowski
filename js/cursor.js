@@ -48,7 +48,7 @@ var circleY = 0.75; var circleX = 2;
 
 // (decimals allowed, not negative numbers)
 
-var letter_spacing = 5;
+var letter_spacing = 2;
 
 
 
@@ -62,7 +62,7 @@ var diameter = 10;
 
 // Rotation speed, set it negative if you want it to spin clockwise (decimals allowed)
 
-var rotation = 0.4;
+var rotation = 0.1;
 
 
 
