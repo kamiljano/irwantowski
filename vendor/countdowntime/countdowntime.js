@@ -16,7 +16,8 @@
           function getTimeFromStartTime() {
             const now = moment();
             return {
-              days: now.diff(options.startTime, 'days'),
+              years: now.diff(options.startTime, 'years'),
+              days: now.diff(options.startTime, 'days') % 365,
               hours: now.diff(options.startTime, 'hours') % 24,
               minutes: now.diff(options.startTime, 'minutes') % 60,
               seconds: now.diff(options.startTime, 'seconds') % 60
