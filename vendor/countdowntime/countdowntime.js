@@ -25,6 +25,7 @@
           }
 
           function initializeClock() {
+            const yearsSpan = $(obj).find('.years');
             const daysSpan = $(obj).find('.days');
             const hoursSpan = $(obj).find('.hours');
             const minutesSpan = $(obj).find('.minutes');
@@ -33,6 +34,7 @@
             function updateClock() { 
               const t = getTimeFromStartTime();
 
+              yearsSpan.html(t.years);
               daysSpan.html(t.days);
               hoursSpan.html(('0' + t.hours).slice(-2));
               minutesSpan.html(('0' + t.minutes).slice(-2));
