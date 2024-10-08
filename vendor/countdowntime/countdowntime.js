@@ -14,13 +14,13 @@
           initializeClock();
 
           function getTimeFromStartTime() {
-            const now = moment();
+            const diffInSeconds = Math.floor((Date.now() - options.startTime) / 1000);
             return {
-              years: now.diff(options.startTime, 'years'),
-              days: now.diff(options.startTime, 'days') % 365,
-              hours: now.diff(options.startTime, 'hours') % 24,
-              minutes: now.diff(options.startTime, 'minutes') % 60,
-              seconds: now.diff(options.startTime, 'seconds') % 60
+                years: Math.floor(diffInSeconds / (365.25 * 24 * 60 * 60)),
+                days:  Math.floor((diffInSeconds % (365.25 * 24 * 60 * 60)) / (24 * 60 * 60)),
+                hours:  Math.floor((diffInSeconds % (24 * 60 * 60)) / (60 * 60)),
+                minutes: Math.floor((diffInSeconds % (60 * 60)) / 60),
+                seconds: diffInSeconds % 60
             };
           }
 

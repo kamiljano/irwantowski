@@ -117,13 +117,10 @@
 <!--===============================================================================================-->
 <script src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
-<script src="vendor/countdowntime/moment.min.js"></script>
-<script src="vendor/countdowntime/moment-timezone.min.js"></script>
-<script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
 <script src="vendor/countdowntime/countdowntime.js"></script>
 <script>
     $('.cd100').count({
-        startTime: moment.utc([2020, 9, 8, 8, 0, 0 , 0])
+        startTime: Date.UTC(2020, 9, 8, 8, 0, 0 , 0)
     });
     // Start Spotify music
     // setTimeout(function(){ 
